@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+
+    <!-- Compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="{% static 'todo/css/MaterializeCss.css' %}"> -->
+    <!-- Compiled and minified JavaScript -->
+    <!-- <script src="{% static 'todo/js/MaterializeJs.js' %}"></script> -->
+    <!-- <script src="{% static 'todo/js/MaterializeDropdawnList.js' %}"></script> -->
+    <link rel="stylesheet" type="text/css" href="{% static 'todo/css/home.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'todo/css/materialize.css' %}"> -->
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'todo/css/BootstarpCss.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'todo/css/home.css' %}">
+
+</head>
+
+<body>
+    {% include "todo/includes/navbar.html" %} {% include "todo/includes/messages.html" %}
+    <div class='container'>
+        {% block content %} {% endblock %}
+    </div>
+</body>
+<script>
+    M.AutoInit();
+</script>
+
+</html>

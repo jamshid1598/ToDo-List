@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a href="{% url 'todo:home' %}" class="navbar-brand">TODO LIST</a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- <ul id="nav-mobile" class="right hide-on-med-and-down">
+            {% if user.is_authenticated %}
+            <li><a href="/account">{{ user.username|title }}</a></li>
+            <li><a href="/logout">Logout</a></li>
+            {% else %}
+            <li><a href="/register">Register</a></li>
+            <li><a href="/login">Login</a></li>
+            {% endif %}
+            <li><a href="/news">News</a></li>
+        </ul> -->
+        <form class="form-inline my-2 my-lg-0" method="POST">
+            {% csrf_token %}
+            <input class="form-control mr-sm-2" type="search" placeholder="Add Item" aria-label="Search" name="item">
+            <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Add To List</button>
+        </form>
+    </div>
+</nav>

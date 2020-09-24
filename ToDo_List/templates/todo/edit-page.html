@@ -1,0 +1,8 @@
+{% extends "todo/base.html" %} {% block content %} {% if object %}
+<form action="." class="form-inline my-2 my-lg-0" method="POST">
+    {% csrf_token %}
+    <input type="search" placeholder="{{ object.item }}" value="{{ object.item }}" name="item" aria-label="Search" class="form-control mr-sm-2">
+    <input type="hidden" name="complated" value="{{ object.complated }}">
+    <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Edit Item</button>
+</form>
+{% endif %} {% endblock %}
